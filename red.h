@@ -12,8 +12,6 @@ class Red {
 private:
     map<string, Enrutador> enrutadores;   // nombre -> enrutador
 
-    // Dijkstra: calcula el menor costo desde 'origen' a todos los demas
-    // y guarda en 'previo' de que enrutador se llega a cada uno
     map<string, int> dijkstra(const string& origen, map<string, string>& previo) const;
 
 public:
