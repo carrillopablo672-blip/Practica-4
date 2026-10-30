@@ -118,7 +118,6 @@ map<string, int> Red::dijkstra(const string& origen, map<string, string>& previo
         }
     }
 
-    // Los inalcanzables quedan en -1
     for (auto& d : dist) {
         if (d.second == INF) {
             d.second = -1;
@@ -136,7 +135,7 @@ Camino Red::calcularCamino(const string& origen, const string& destino) const {
     map<string, string> previo;
     map<string, int> dist = dijkstra(origen, previo);
     if (dist[destino] == -1) {
-        return camino;                      // no hay camino
+        return camino;                      
     }
 
     // Se reconstruye de atras hacia adelante: destino, previo, ..., origen
