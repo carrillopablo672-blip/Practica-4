@@ -5,8 +5,6 @@
 
 using namespace std;
 
-// ================= Enrutadores =================
-
 bool Red::agregarEnrutador(const string& nombre) {
     if (nombre.empty() || existeEnrutador(nombre)) {
         return false;
